@@ -1,4 +1,4 @@
-FROM ubuntu:18.04 as base
+FROM ubuntu:20.04 as base
 
 # make clear that it is a noninteractive session
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
@@ -68,7 +68,6 @@ RUN rm ./manager
 
 # expose ports
 EXPOSE 8080
-EXPOSE 4430
 
 WORKDIR /home/source/proxy/
 
